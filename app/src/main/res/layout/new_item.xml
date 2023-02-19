@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".ItemDialog">
+
+
+    <Spinner
+        android:id="@+id/spinnerCategory"
+        style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox.Dense.ExposedDropdownMenu"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:entries="@array/categories"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/etItemName"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Item Name"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCategory"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <EditText
+    android:id="@+id/etItemDescription"
+    android:layout_width="346dp"
+    android:layout_height="221dp"
+    android:ems="10"
+    android:gravity="start|top"
+    android:inputType="textMultiLine"
+    android:text="Description"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/etItemName"
+    app:layout_constraintVertical_bias="0.24"
+    tools:layout_editor_absoluteX="32dp"
+    tools:ignore="MissingConstraints" />
+
+    <EditText
+        android:id="@+id/etItemPrice"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="Price"
+        app:layout_constraintBottom_toBottomOf="@id/etItemDescription"
+        app:layout_constraintTop_toBottomOf="@+id/etItemName"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="32dp" />
+
+    <ToggleButton
+        android:id="@+id/toggleButton"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:text="Save"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etItemDescription"
+        app:layout_constraintVertical_bias="0.328"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="105dp" />
+
+    <CheckBox
+        android:id="@+id/cbItemStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:minHeight="48dp"
+        android:text="Purchased"
+        app:layout_constraintBottom_toBottomOf="@id/etItemDescription"
+        app:layout_constraintTop_toBottomOf="@+id/etItemName"
+        app:layout_constraintVertical_bias="0.008"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="269dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
